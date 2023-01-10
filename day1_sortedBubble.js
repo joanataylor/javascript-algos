@@ -45,3 +45,35 @@ function bubbleSort(arr = []) {
 
 console.log(bubbleSort(numsRandomOrder))
 console.log(bubbleSort(numsReversed))
+
+//******************************************************************************** */
+
+function bubbleSort(nums = []) {
+
+  let new_array = [];
+  let temp;
+
+  let length = nums.length
+  for(let j = 0; j < length; j++){
+      
+
+
+      for(let i = 0; i < nums.length; i++){
+          console.log(nums.length)
+          if(nums[i] < nums[i+1]){
+              temp = nums[i + 1]
+              nums[i+1] = nums[i]
+              nums[i] = temp           
+              
+          }
+      }
+      new_array.push(nums[nums.length-1])
+      nums.pop()
+          
+  }
+  return new_array
+
+
+}
+
+console.log(bubbleSort(numsRandomOrder))
